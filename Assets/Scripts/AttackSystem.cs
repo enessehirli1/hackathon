@@ -22,14 +22,12 @@ public class AttackSystem : MonoBehaviour
     // Animasyon event'ten çaðrýlacak
     public void ActivateHitbox()
     {
-        Debug.Log("Hitbox activated!"); // Hitbox aktif olduðunda konsola mesaj yazdýr
         attackHitbox.SetActive(true); // Attack baþladýðýnda hitbox'ý aktif yap
     }
 
     // Animasyon event'ten çaðrýlacak
     public void DeactivateHitbox()
     {
-        Debug.Log("Hitbox deactivated!"); // Hitbox aktif olduðunda konsola mesaj yazdýr
 
         attackHitbox.SetActive(false); // Attack bittiðinde hitbox'ý pasif yap
     }
