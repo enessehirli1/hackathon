@@ -4,7 +4,7 @@ using UnityEngine.UI;
 public class SimpleTimerBar : MonoBehaviour
 {
     public Image fillImage;
-    private float maxTime = 120f;
+    public float maxTime = 120f;
 
     public float currentTime;
 

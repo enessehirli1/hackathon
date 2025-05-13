@@ -351,7 +351,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 833161338887558794, guid: 4c1a948d6ed44064aae1dadc02e93650, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 98.3
+      value: 95.98
       objectReference: {fileID: 0}
     - target: {fileID: 833161338887558794, guid: 4c1a948d6ed44064aae1dadc02e93650, type: 3}
       propertyPath: m_LocalPosition.y
@@ -389,9 +389,33 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1382552555646198488, guid: 4c1a948d6ed44064aae1dadc02e93650, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -4.54
+      objectReference: {fileID: 0}
+    - target: {fileID: 1382552555646198488, guid: 4c1a948d6ed44064aae1dadc02e93650, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 2.55
+      objectReference: {fileID: 0}
     - target: {fileID: 1704898450569827699, guid: 4c1a948d6ed44064aae1dadc02e93650, type: 3}
       propertyPath: m_Name
       value: Statue
+      objectReference: {fileID: 0}
+    - target: {fileID: 6723556353713252594, guid: 4c1a948d6ed44064aae1dadc02e93650, type: 3}
+      propertyPath: m_margin.w
+      value: 24.400642
+      objectReference: {fileID: 0}
+    - target: {fileID: 6723556353713252594, guid: 4c1a948d6ed44064aae1dadc02e93650, type: 3}
+      propertyPath: m_margin.x
+      value: 96.16754
+      objectReference: {fileID: 0}
+    - target: {fileID: 6723556353713252594, guid: 4c1a948d6ed44064aae1dadc02e93650, type: 3}
+      propertyPath: m_margin.y
+      value: 20.985586
+      objectReference: {fileID: 0}
+    - target: {fileID: 6723556353713252594, guid: 4c1a948d6ed44064aae1dadc02e93650, type: 3}
+      propertyPath: m_margin.z
+      value: 93.47511
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1242,6 +1266,10 @@ PrefabInstance:
     - target: {fileID: 543230873245890303, guid: 43a43b2e25caf3442bef0067d9495dd4, type: 3}
       propertyPath: m_Name
       value: TimerBar
+      objectReference: {fileID: 0}
+    - target: {fileID: 8869795107743103722, guid: 43a43b2e25caf3442bef0067d9495dd4, type: 3}
+      propertyPath: maxTime
+      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
