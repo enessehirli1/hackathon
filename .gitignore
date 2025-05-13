@@ -1,0 +1,24 @@
+[Libraries to ignore]
+[Libraries to ignore]
+Library/
+Temp/
+Obj/
+Build/
+Builds/
+Logs/
+UserSettings/
+MemoryCaptures/
+
+# Auto-generated VS/JetBrains Rider
+.vs/
+*.sln
+*.csproj
+*.unityproj
+*.pidb
+*.user
+*.userprefs
+*.unitypackage
+
+# OS files
+.DS_Store
+Thumbs.db
