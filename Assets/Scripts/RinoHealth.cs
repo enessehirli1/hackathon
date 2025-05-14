@@ -7,7 +7,7 @@ public class RinoHealth : MonoBehaviour
 
     public Collider2D rinoCollider;
     public SimpleTimerBar timerBar;
-    public float timeReward = 20f;
+    public float timeReward;
     public float timePenalty = 50f;
 
     private bool isDead = false;
@@ -52,6 +52,15 @@ public class RinoHealth : MonoBehaviour
         {
             rb.bodyType = RigidbodyType2D.Dynamic;
             rb.gravityScale = 3f;
+        }
+
+        if (timerBar.currentTime <120)
+        {
+            timeReward = 60f;
+        }
+        else
+        {
+            timeReward = timerBar.maxTime - timerBar.currentTime;
         }
 
         if (timerBar != null)
