@@ -1,42 +1,34 @@
-using TMPro;
 using UnityEngine;
 
 public class InteractionZone : MonoBehaviour
 {
-
-    public TextMeshProUGUI interactPrompt;
     private bool playerInRange = false;
-
-    SimpleTimerBar simpleTimerBar = new SimpleTimerBar();
-
-    void Start()
-    {
-        if (interactPrompt != null)
-            interactPrompt.gameObject.SetActive(false);
-    }
+    private bool usable = true;
+    public SimpleTimerBar currentTime;
+    public float addedHealth = 10f;
 
     void Update()
     {
-        if (playerInRange && Input.GetKeyDown(KeyCode.E))
+        if (playerInRange && Input.GetKeyDown(KeyCode.E) && usable)
         {
-            simpleTimerBar.currentTime += 10;
+            currentTime.currentTime += addedHealth;
+            usable = false;
+            Debug.Log("Interacted with object");
         }
     }
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player") && interactPrompt != null)
+        if (other.CompareTag("Player"))
         {
-            interactPrompt.gameObject.SetActive(true);  // Show prompt
             playerInRange = true;
         }
     }
 
     void OnTriggerExit2D(Collider2D other)
     {
-        if (other.CompareTag("Player") && interactPrompt != null)
+        if (other.CompareTag("Player"))
         {
-            interactPrompt.gameObject.SetActive(false);  // Hide prompt
             playerInRange = false;
         }
     }

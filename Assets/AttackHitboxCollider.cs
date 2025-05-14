@@ -7,8 +7,13 @@ public class AttackHitboxCollider : MonoBehaviour
         if (collision.CompareTag("Enemy")) // Enemy tag'ine sahip objeye çarptýysa
         {
             Debug.Log("Enemy Hit!");
-            // Burada düþmana hasar verebilir veya baþka iþlemler yapabilirsiniz
-            // collision.GetComponent<EnemyHealth>()?.TakeDamage(10);
+
+            // RinoHealth component'ini al ve hasar ver
+            RinoHealth rino = collision.GetComponent<RinoHealth>();
+            if (rino != null)
+            {
+                rino.TakeDamage(1);
+            }
         }
     }
 }
