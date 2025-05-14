@@ -7,16 +7,14 @@ public class MovingPlatformScript : MonoBehaviour
     public Transform[] points;
     private int i;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         transform.position = points[startingPoint].position;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if(Vector2.Distance(transform.position, points[i].position) < 0.02f)
+        if (Vector2.Distance(transform.position, points[i].position) < 0.02f)
         {
             i++;
             if (i == points.Length)
@@ -27,13 +25,22 @@ public class MovingPlatformScript : MonoBehaviour
 
         transform.position = Vector2.MoveTowards(transform.position, points[i].position, speed * Time.deltaTime);
     }
-   
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        collision.transform.SetParent(transform);
+        // Sadece player için
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            collision.transform.SetParent(transform);
+        }
     }
+
     private void OnCollisionExit2D(Collision2D collision)
     {
-        
+        // Sadece player için
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            collision.transform.SetParent(null);
+        }
     }
 }

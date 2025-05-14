@@ -14,6 +14,12 @@ public class AttackHitboxCollider : MonoBehaviour
             {
                 rino.TakeDamage(1);
             }
+
+            SpiritHealth spirit = collision.GetComponent<SpiritHealth>();
+            if (spirit != null)
+            {
+                spirit.TakeDamage(1);
+            }
         }
     }
 }
